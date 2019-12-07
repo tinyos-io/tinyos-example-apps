@@ -10,3 +10,9 @@ yay -S nesc-git tinyos-tools-git
 yay -S gcc49
 ```
 
+
+
+```
+chmod +x ./script/setup.sh
+./script/setup.sh
+```
