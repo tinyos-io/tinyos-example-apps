@@ -35,8 +35,6 @@ sed -i 's/$(TFLAGS)/$(TFLAGS) -I\/usr\/lib\/gcc\/x86_64-pc-linux-gnu\/4.9.4\/inc
 
 
 
-
-
 ################################################################################### compiler version
 sed -i 's/export GCC=gcc/export GCC=gcc-4.9/g' src/tinyos-main/support/make/extras/sim.extra
 sed -i 's/GPP=g++/GPP=g++-4.9/g' src/tinyos-main/support/make/extras/sim.extra
@@ -48,12 +46,15 @@ CFLAGS+=-I/usr/include\
 PFLAGS+=-D_Float128=double\
 PFLAGS+=-D_BITS_FLOATN_H=0\
 PYTHON_VERSION=2.7\
+CLASSPATH="/usr/lib/java/tinyos.jar"\
 ' src/tinyos-main/apps/Blink/Makefile\
   src/tinyos-main/apps/RadioCountToLeds/Makefile\
   src/tinyos-main/apps/RadioSenseToLeds/Makefile
 
 
-
+sed -i 's/javac /javac -classpath $(CLASSPATH) /g'\
+  src/tinyos-main/apps/RadioCountToLeds/Makefile\
+  src/tinyos-main/apps/RadioSenseToLeds/Makefile
 
 
 
