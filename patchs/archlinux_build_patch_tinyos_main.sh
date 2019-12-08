@@ -49,7 +49,8 @@ PYTHON_VERSION=2.7\
 CLASSPATH="/usr/lib/java/tinyos.jar"\
 ' src/tinyos-main/apps/Blink/Makefile\
   src/tinyos-main/apps/RadioCountToLeds/Makefile\
-  src/tinyos-main/apps/RadioSenseToLeds/Makefile
+  src/tinyos-main/apps/RadioSenseToLeds/Makefile\
+  src/tinyos-main/apps/BaseStation/Makefile
 
 
 sed -i 's/javac /javac -classpath $(CLASSPATH) /g'\
