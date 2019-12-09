@@ -54,7 +54,7 @@ chmod +x ./script/setup.sh
 - PppRouter
 - UDPEcho
 - TCPEcho
-
+- tests/Blink
 
 
 
