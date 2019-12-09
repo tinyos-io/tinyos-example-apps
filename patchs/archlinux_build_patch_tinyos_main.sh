@@ -40,7 +40,7 @@ sed -i 's/export GCC=gcc/export GCC=gcc-4.9/g' src/tinyos-main/support/make/extr
 sed -i 's/GPP=g++/GPP=g++-4.9/g' src/tinyos-main/support/make/extras/sim.extra
 
 
-
+################################################################################### BUILD FLAGS
 #sed -i '/^COMPONENT=.*/i\
 #CFLAGS+=-I/usr/lib/gcc/x86_64-pc-linux-gnu/4.9.4/include\
 #CFLAGS+=-I/usr/include\
@@ -65,11 +65,19 @@ CLASSPATH="/usr/lib/java/tinyos.jar"'\
   {} \;
 
 
-
-
 sed -i 's/javac /javac -classpath $(CLASSPATH) /g'\
   src/tinyos-main/apps/RadioCountToLeds/Makefile\
   src/tinyos-main/apps/RadioSenseToLeds/Makefile
+
+
+################################################################################### DEFINES
+
+sed -i '/^module .*/i\
+#define nop() __asm volatile("nop")\
+#define bkpt() do {} while (0)\
+' src/tinyos-main/apps/tests/Blink/BlinkC.nc
+
+
 
 
 

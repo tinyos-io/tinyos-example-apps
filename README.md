@@ -36,9 +36,6 @@ chmod +x ./script/setup.sh
 - tests/arbiters/TestFcfsArbiter
 - tests/arbiters/TestRoundRobinArbiter
 
-
-
-
 ## fail (being resolved)
 - AntiTheft
 - BaseStation15.4
@@ -54,7 +51,11 @@ chmod +x ./script/setup.sh
 - PppRouter
 - UDPEcho
 - TCPEcho
+
+## resolved with patch
 - tests/Blink
+
+
 
 
 
