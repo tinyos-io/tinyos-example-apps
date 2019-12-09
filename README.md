@@ -17,43 +17,6 @@ chmod +x ./script/setup.sh
 
 # http://tinyos.stanford.edu/tinyos-wiki/index.php/TOSSIM
 
-# compiling all tinyos-main/apps examples with tossim
-
-## success
-- Blink
-- RadioCountToLeds
-- RadioSenseToLeds
-- BaseStation
-- jennic-tests/base/Glow
-- jennic-tests/base/SimpleBlink
-- jennic-tests/serial/TestSerial
-- MultihopOscilloscope
-- Null
-- Oscilloscope
-- Powerup
-- PPPSniffer
-- Sense
-- tests/arbiters/TestFcfsArbiter
-- tests/arbiters/TestRoundRobinArbiter
-
-## fail (being resolved)
-- AntiTheft
-- BaseStation15.4
-- CoapBlip
-- CoapPpp
-- jennic-apps
-- jennic-tests/base/Platform
-- jennic-tests/radio/Ieee154Bare
-- jennic-tests/serial/TestPrintf
-- MHHello
-- MultihopOscilloscopeLqi
-- MViz
-- PppRouter
-- UDPEcho
-- TCPEcho
-
-## resolved with patch
-- tests/Blink
 
 
 

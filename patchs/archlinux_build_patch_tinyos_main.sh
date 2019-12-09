@@ -65,9 +65,14 @@ CLASSPATH="/usr/lib/java/tinyos.jar"'\
   {} \;
 
 
+find ./src/tinyos-main/apps -name "Makefile" -exec \
 sed -i 's/javac /javac -classpath $(CLASSPATH) /g'\
-  src/tinyos-main/apps/RadioCountToLeds/Makefile\
-  src/tinyos-main/apps/RadioSenseToLeds/Makefile
+  {} \;
+
+
+#sed -i 's/javac /javac -classpath $(CLASSPATH) /g'\
+#  src/tinyos-main/apps/RadioCountToLeds/Makefile\
+#  src/tinyos-main/apps/RadioSenseToLeds/Makefile
 
 
 ################################################################################### DEFINES
